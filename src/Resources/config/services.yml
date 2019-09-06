@@ -1,9 +1,6 @@
 services:
-    sioweb.dummy.dca.tl_dummy:
-        class: Sioweb\DummyBundle\Dca\Dummy
+    eloquent.manager:
         public: true
-        arguments:
-            - "@contao.framework"
-            - "@security.token_storage"
-            - "@session"
-            - "doctrine.orm.entity_manager"
+        class: Illuminate\Database\Capsule\Manager
+        calls:
+            - [addConnection, [{host: "%database_host%", driver: 'mysql', database: "%database_name%", username: "%database_user%", password: "%database_password%"}]]
