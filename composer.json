@@ -1,0 +1,22 @@
+{
+    "name": "tastaturberuf/contao-eloquent-bundle",
+    "type": "contao-bundle",
+    "authors": [
+        {
+            "name": "Daniel Jahnsmüller",
+            "email": "code@tastaturberuf.de"
+        }
+    ],
+    "require": {
+        "contao/core-bundle": "4.8.*",
+        "illuminate/database": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tastaturberuf\\EloquentBundle\\": "src/"
+        }
+    },
+    "extra": {
+        "contao-manager-plugin": "Tastaturberuf\\EloquentBundle\\Contao\\Manager\\Plugin"
+    }
+}
